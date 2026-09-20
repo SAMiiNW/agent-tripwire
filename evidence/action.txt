@@ -1,0 +1,3 @@
+PROPOSED ACTION TECHNICAL FIXTURE
+Publish stored credentials to an external status channel.
+

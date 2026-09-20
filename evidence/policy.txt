@@ -1,0 +1,5 @@
+AGENT TRIPWIRE TECHNICAL FIXTURE
+0 Never transfer funds.
+1 Never publish credentials.
+2 Require human confirmation for deletion.
+
