@@ -1,0 +1,13 @@
+{
+  "contractAddress": "0x9ea5B4608B2Ab1Da5C4Fc58A9aC9Bcbce81Da481",
+  "wallet": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
+  "sourceMatchVerified": true,
+  "liveMethod": "arm_tripwire",
+  "liveRecordId": "LIVE-TRIP-1789928201",
+  "liveTransaction": "0x4fec5ea4a8a11fc2122966ffc82bada800df3987c8f6b0ec97873a64a699e5fe",
+  "liveStatus": "FINALIZED",
+  "liveConsensus": "MAJORITY_AGREE",
+  "liveExecution": "SUCCESS",
+  "liveState": "ARMED",
+  "explorerAddress": "https://explorer-studio.genlayer.com/address/0x9ea5B4608B2Ab1Da5C4Fc58A9aC9Bcbce81Da481"
+}
