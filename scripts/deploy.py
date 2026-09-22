@@ -21,7 +21,10 @@ owner = create_account(account_private_key=secret(1))
 client = create_client(chain=studionet, account=owner)
 tx = client.deploy_contract(code=(ROOT / "contracts" / "contract.py").read_text(), args=[])
 print("deployment_tx=" + str(tx), flush=True)
-receipt = client.wait_for_transaction_receipt(transaction_hash=tx, wait_until="finalized", retries=180, interval=5000, full_transaction=True)
+try:
+    receipt = client.wait_for_transaction_receipt(transaction_hash=tx, wait_until="finalized", retries=180, interval=5000, full_transaction=True)
+except TypeError:
+    receipt = client.wait_for_transaction_receipt(transaction_hash=tx, status="FINALIZED", retries=180, interval=5000, full_transaction=True)
 address = receipt.get("data", {}).get("contract_address") or receipt.get("to_address") or receipt.get("recipient")
 print(json.dumps({"result": str(receipt.get("result_name")), "execution": str(receipt.get("tx_execution_result_name")), "data": receipt.get("data"), "to": str(receipt.get("to_address")), "recipient": str(receipt.get("recipient")), "consensus": receipt.get("consensus_data")}, default=str), flush=True)
 assert "MAJORITY_AGREE" in str(receipt.get("result_name", "")).upper()

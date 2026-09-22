@@ -17,9 +17,14 @@ def secret(slot: int) -> str:
 
 
 def finalized(client, tx):
-    receipt = client.wait_for_transaction_receipt(transaction_hash=tx, wait_until="finalized", retries=180, interval=5000, full_transaction=True)
+    print("write_tx=" + str(tx), flush=True)
+    try:
+        receipt = client.wait_for_transaction_receipt(transaction_hash=tx, wait_until="finalized", retries=180, interval=5000, full_transaction=True)
+    except TypeError:
+        receipt = client.wait_for_transaction_receipt(transaction_hash=tx, status="FINALIZED", retries=180, interval=5000, full_transaction=True)
     assert "MAJORITY_AGREE" in str(receipt.get("result_name", "")).upper()
     leader = ((receipt.get("consensus_data", {}).get("leader_receipt") or [{}])[0]).get("execution_result")
+    print(json.dumps({"result": str(receipt.get("result_name")), "leaderExecution": str(leader), "leader": (receipt.get("consensus_data", {}).get("leader_receipt") or [{}])[0]}, default=str), flush=True)
     assert str(leader).upper() == "SUCCESS"
     return str(tx)
 

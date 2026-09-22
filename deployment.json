@@ -1,17 +1,17 @@
 {
   "project": "agent-tripwire",
   "network": "StudioNet",
-  "contractAddress": "0x9ea5B4608B2Ab1Da5C4Fc58A9aC9Bcbce81Da481",
-  "deploymentTransaction": "0x114c6fac35969b48f9614b967363ae2be32197bf434bb6ffe80c1660ed3fcd54",
+  "contractAddress": "0x57a91E81815742e8d693570836E0B7F601DC5244",
+  "deploymentTransaction": "0xcd1bc632093056f96a99555462ed6436ddbd07746208f3ab15d8f9fd5b9ab975",
   "status": "FINALIZED",
   "consensus": "MAJORITY_AGREE",
   "execution": "SUCCESS",
-  "sourceCommit": "7f280a6f65d1c42286ad27052aa1f261217f6aa0",
+  "sourceCommit": "62725d342ff00fa43ee8dbfba923a58f3c75a866",
   "repository": "https://github.com/SAMiiNW/agent-tripwire",
   "sourceMatchVerified": true,
   "wallet": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
-  "liveInitializationTransaction": "0x4fec5ea4a8a11fc2122966ffc82bada800df3987c8f6b0ec97873a64a699e5fe",
-  "liveRecordId": "LIVE-TRIP-1789928201",
+  "liveInitializationTransaction": "0x8b581f801a6040e24877919d99a159282fd03565357ec941bf201ea4d2322515",
+  "liveRecordId": "REMEDIATION-1790111098",
   "liveState": "ARMED",
-  "explorerAddress": "https://explorer-studio.genlayer.com/address/0x9ea5B4608B2Ab1Da5C4Fc58A9aC9Bcbce81Da481"
+  "explorerAddress": "https://explorer-studio.genlayer.com/address/0x57a91E81815742e8d693570836E0B7F601DC5244"
 }
