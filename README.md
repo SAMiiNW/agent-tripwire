@@ -11,6 +11,8 @@ An agent should not discover its boundary after the irreversible call. This cont
 
 `allowed` is not free-form. It is valid only when the violation set is empty and severity is `SAFE`. A mutable policy fails its stored digest. A tripped action can reset only when the named monitor supplies fresh-origin evidence covering the exact violation set. Anyone can expire an abandoned decision or recovery window.
 
+Every fetched policy, action, and recovery document must be valid UTF-8 and no larger than 14,000 bytes. Oversized content is rejected explicitly; it is never truncated for consensus. Recovery validators refetch the complete frozen policy and original action, verify both stored digests, and evaluate each violation against its underlying policy text rather than trusting numeric indexes alone.
+
 ## Control states
 
 `ARMED -> CLEARED`
